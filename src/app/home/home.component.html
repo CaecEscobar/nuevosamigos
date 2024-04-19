@@ -1,0 +1,63 @@
+<div class="mx-auto flex flex-col items-center p-4">
+    <h1 class="frank text-black text-center text-5xl sm:text-9xl my-4">NUEVOS <br> AMIGOS</h1>
+
+    <img src="assets/logos/logo-nuevos-amigos-circular.svg" alt="" class="w-2/4 sm:w-1/4">
+
+    <h1 class="frank text-black text-center text-5xl sm:text-9xl my-4">SERVICIOS</h1>
+
+    <div class="grid gap-x-2 gap-y-4 grid-cols-1 sm:grid-cols-4 justify-items-center items-center">
+        <div class="sm:block">
+            <img src="assets/logos/logo-nuevos-amigos.svg" alt="" class="w-full mb-3 max-h-20 sm:max-h-36">
+            <div class="border-8 border-black rounded-2xl p-3 w-full">
+                <p class="frank text-black text-center text-xl">ESTUDIO</p>
+                <p class="nh-heavy text-gray-600 text-sm text-center">Grabación, mezcla y master</p>
+            </div>
+        </div>
+
+        <div class="sm:block">
+            <img src="assets/logos/logo-amigos-a-domicilio.svg" alt="" class="w-full mb-3 max-h-20 sm:max-h-36">
+            <div class="border-8 border-black rounded-2xl p-3 w-full">
+                <p class="frank text-black text-center text-xl">AMIGOS A DOMICILIO</p>
+                <p class="nh-heavy text-gray-600 text-sm text-center">El estudio en tu casa</p>
+            </div>
+        </div>
+
+        <div class="sm:block">
+            <img src="assets/logos/logo-amigos-en-casa.svg" alt="" class="w-full mb-3 max-h-20 sm:max-h-36">
+            <div class="border-8 border-black rounded-2xl p-3 w-full">
+                <p class="frank text-black text-center text-xl">AMIGOS EN CASA</p>
+                <p class="nh-heavy text-gray-600 text-sm text-center">Sala de ensayos</p>
+            </div>
+        </div>
+
+        <div class="sm:block">
+            <img src="assets/logos/logo-nuevos-disenos.svg" alt="" class="w-full mb-3 max-h-20 sm:max-h-36">
+            <div class="border-8 border-black rounded-2xl p-3 w-full">
+                <p class="frank text-black text-center text-xl">NUEVOS DISEÑOS</p>
+                <p class="nh-heavy text-gray-600 text-sm text-center">Gráficos, logos, portadas, etc.</p>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="frank text-black text-center text-5xl sm:text-9xl my-4">PORTAFOLIO</h1>
+
+    <div class="grid gap-2 grid-cols-2 sm:grid-cols-4 justify-items-center items-center">
+        @for (file of files; track $index) {
+        <div class="relative">
+            <div
+                class="border-8 border-black rounded-2xl w-full h-full bg-white bg-opacity-0 opacity-0 hover:bg-opacity-50 hover:opacity-100 absolute hover:inset-0">
+                <div class="flex flex-col items-center justify-center h-full">
+                    <p class="frank text-center text-sm sm:text-2xl text-black uppercase">{{file.band}}</p>
+                    <p class="frank text-center text-xs sm:text-xl text-black uppercase">{{file.name}}</p>
+                    <p class="nh-heavy text-[0.5rem] sm:text-sm text-center text-black uppercase">{{file.type + ' / ' +
+                        file.year}}</p>
+                    <p class="nh-heavy text-[0.5rem] sm:text-sm text-center text-black uppercase">{{file.genre}}</p>
+                    <a [href]="file.url" target="_blank" rel="noopener noreferrer"
+                        class="nh-heavy text-[0.5rem] sm:text-sm text-center text-gray-600 uppercase">Spotify</a>
+                </div>
+            </div>
+            <img class="border-8 border-black rounded-2xl" [src]="file.path" alt="">
+        </div>
+        }
+    </div>
+</div>

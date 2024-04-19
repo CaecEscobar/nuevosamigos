@@ -1,0 +1,56 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Frankfurter';
+    src: url('assets/fonts/Frankfurter\ Std\ Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeueHelveticaBQBlack';
+    src: url('assets/fonts/NeueHelveticaBQBlack.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeueHelveticaBQBold';
+    src: url('assets/fonts/NeueHelveticaBQBold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeueHelveticaBQHeavy';
+    src: url('assets/fonts/NeueHelveticaBQHeavy.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    /* height: 100vh;
+    width: 100vw; */
+}
+
+.frank {
+    font-family: 'Frankfurter';
+}
+
+.nh-black {
+    font-family: 'NeueHelveticaBQBlack';
+}
+
+.nh-bold {
+    font-family: 'NeueHelveticaBQBold';
+}
+
+.nh-heavy {
+    font-family: 'NeueHelveticaBQHeavy';
+}
