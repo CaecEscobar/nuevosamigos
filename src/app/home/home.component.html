@@ -6,7 +6,7 @@
     <h1 class="frank text-black text-center text-5xl sm:text-9xl my-4">SERVICIOS</h1>
 
     <div class="grid gap-x-2 gap-y-4 grid-cols-1 sm:grid-cols-4 justify-items-center items-center">
-        <div class="sm:block">
+        <div class="sm:block w-full">
             <img src="assets/logos/logo-nuevos-amigos.svg" alt="" class="w-full mb-3 max-h-20 sm:max-h-36">
             <div class="border-8 border-black rounded-2xl p-3 w-full">
                 <p class="frank text-black text-center text-xl">ESTUDIO</p>
@@ -14,7 +14,7 @@
             </div>
         </div>
 
-        <div class="sm:block">
+        <div class="sm:block w-full">
             <img src="assets/logos/logo-amigos-a-domicilio.svg" alt="" class="w-full mb-3 max-h-20 sm:max-h-36">
             <div class="border-8 border-black rounded-2xl p-3 w-full">
                 <p class="frank text-black text-center text-xl">AMIGOS A DOMICILIO</p>
@@ -22,7 +22,7 @@
             </div>
         </div>
 
-        <div class="sm:block">
+        <div class="sm:block w-full">
             <img src="assets/logos/logo-amigos-en-casa.svg" alt="" class="w-full mb-3 max-h-20 sm:max-h-36">
             <div class="border-8 border-black rounded-2xl p-3 w-full">
                 <p class="frank text-black text-center text-xl">AMIGOS EN CASA</p>
@@ -30,7 +30,7 @@
             </div>
         </div>
 
-        <div class="sm:block">
+        <div class="sm:block w-full">
             <img src="assets/logos/logo-nuevos-disenos.svg" alt="" class="w-full mb-3 max-h-20 sm:max-h-36">
             <div class="border-8 border-black rounded-2xl p-3 w-full">
                 <p class="frank text-black text-center text-xl">NUEVOS DISEÑOS</p>
@@ -52,7 +52,9 @@
                     <p class="nh-heavy text-[0.5rem] sm:text-sm text-center text-black uppercase">{{file.type + ' / ' +
                         file.year}}</p>
                     <p class="nh-heavy text-[0.5rem] sm:text-sm text-center text-black uppercase">{{file.genre}}</p>
-                    <a [href]="file.url" target="_blank" rel="noopener noreferrer"
+                    <a [href]="file.urlInstagram" target="_blank" rel="noopener noreferrer"
+                        class="nh-heavy text-[0.5rem] sm:text-sm text-center text-gray-600 uppercase">Instagram</a>
+                    <a [href]="file.urlSpotify" target="_blank" rel="noopener noreferrer"
                         class="nh-heavy text-[0.5rem] sm:text-sm text-center text-gray-600 uppercase">Spotify</a>
                 </div>
             </div>
